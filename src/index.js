@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const WidgetDivs = document.querySelectorAll('.my_first_widget_finder')
+WidgetDivs.forEach(Div => {
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App domElement={Div} />
   </React.StrictMode>,
-  document.getElementById('root')
+  Div
 );
+})
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
